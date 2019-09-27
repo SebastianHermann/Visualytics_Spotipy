@@ -14,6 +14,7 @@ SPOTIPY_CLIENT_SECRET='XXXXXXXXXXX'
 #Redirection path for authentication
 SPOTIPY_REDIRECT_URI='XXXXXXXXXXX'
 
+#creating an access token
 try:
     token = util.prompt_for_user_token(username,client_id=SPOTIPY_CLIENT_ID,client_secret=SPOTIPY_CLIENT_SECRET,redirect_uri=SPOTIPY_REDIRECT_URI)
 except:
