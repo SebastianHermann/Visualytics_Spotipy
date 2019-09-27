@@ -2,12 +2,17 @@ import os, sys, json, spotipy, webbrowser
 import spotipy.util as util
 from json.decoder import JSONDecodeError
 
+#>>>Note: When executing this file, the spotify user id has to be given in the terminal<<<
+
 #Get the username from terminal
 username = sys.argv[1]
 
-SPOTIPY_CLIENT_ID=''
-SPOTIPY_CLIENT_SECRET=''
-SPOTIPY_REDIRECT_URI=''
+#Spotify client developer id
+SPOTIPY_CLIENT_ID='XXXXXXXXXXX'
+#Spotify client secret
+SPOTIPY_CLIENT_SECRET='XXXXXXXXXXX'
+#Redirection path for authentication
+SPOTIPY_REDIRECT_URI='XXXXXXXXXXX'
 
 try:
     token = util.prompt_for_user_token(username,client_id=SPOTIPY_CLIENT_ID,client_secret=SPOTIPY_CLIENT_SECRET,redirect_uri=SPOTIPY_REDIRECT_URI)
